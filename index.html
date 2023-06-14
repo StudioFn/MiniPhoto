@@ -39,11 +39,11 @@
                     <div class='image-container-left image-container' ref='dropbox' @drop='dropfile'>
                         <img :src="imageBase64Data" class='srcimg' @load='imgload'>
                         <div id='drop-tip-box' v-bind:class="{'drop-tip-box-on': isdorpin}" ref='drop-tip-box'>
-                            
+
                             <span id='#drop-tip'>{{ tipStr }}</span>
                         </div>
                     </div>
-                    <span class='split'></span>
+<!--                    <span class='split'></span>-->
                     <div class='image-container-right image-container'>
                         <img :src='destImageBase64Data' class='show-dest-img'>
                     </div>
