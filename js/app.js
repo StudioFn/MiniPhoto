@@ -190,7 +190,7 @@ var FLAG = {
         var t = e.data;
         switch (t.msg) {
           case FLAG.CONVERT_FINISHED:
-            (this.destImageBase64Data = this.arrayBufferToBase64(
+            (this.imageBase64Data = this.arrayBufferToBase64(
               t.buffer,
               this.destImgWidth,
               this.destImgHeight

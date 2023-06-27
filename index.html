@@ -36,24 +36,21 @@
                         <input type='file' id='uploadfile' style='display: none;' accept="image/*"
                             @change='handleUploadFile'>
                     </label>
-                    <div class='image-container-left image-container' ref='dropbox' @drop='dropfile'>
-                        <img :src="imageBase64Data" class='srcimg' @load='imgload'>
-                        <div id='drop-tip-box' v-bind:class="{'drop-tip-box-on': isdorpin}" ref='drop-tip-box'>
 
+                    <div class='image-container-left image-container' ref='dropbox' @drop='dropfile'>
+                        <img :src="imageBase64Data" class='show-dest-img' @load='imgload'>
+                        <div id='drop-tip-box' v-bind:class="{'drop-tip-box-on': isdorpin}" ref='drop-tip-box'>
                             <span id='#drop-tip'>{{ tipStr }}</span>
                         </div>
                     </div>
-<!--                    <span class='split'></span>-->
-                    <div class='image-container-right image-container'>
-                        <img :src='destImageBase64Data' class='show-dest-img'>
-                    </div>
+
                 </div>
                 <div class='bottom'>
                     <div class='group1 group'>
-                        <el-input-box @input='inputImageWidth' :value='destImgWidth' ref='input-w'>生成的像素图宽
+                        <el-input-box class="el_ib" @input='inputImageWidth' :value='destImgWidth' ref='input-w'>像素图宽
                         </el-input-box>
                         <el-checkbox v-model='lockWH' class='lock-w-and-h'>锁定宽高比例</el-checkbox>
-                        <el-input-box @input='inputImageHeight' :value='destImgHeight' ref='input-h'>生成的像素图高
+                        <el-input-box class="el_ib" @input='inputImageHeight' :value='destImgHeight' ref='input-h'>像素图高
                         </el-input-box>
                         <fieldset class="fieldset-container">
                             <legend>像素面的方向</legend>

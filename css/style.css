@@ -1,4 +1,4 @@
-html,
+
 body {
     padding: 0;
     margin: 0;
@@ -46,39 +46,28 @@ body {
 
 .image-container {
     overflow: hidden;
-    position: relative;
     justify-content: center;
     align-items: center;
     width: 300px;
     height: 200px;
 }
 
-.image-container-right,
 .image-container-left{
     overflow: hidden;
     border-radius: 10px;
     margin-top: 10px;
-    position: absolute;
-    top: 0;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-.image-container-right>img,
-.image-container-left>img{
+.show-dest-img{
+    width: 100%;
+    height: 200px;
     object-fit: cover;
 }
 
-.srcimg {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-}
-
 #drop-tip-box {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 999;
+
     pointer-events: none;
     display: flex;
     flex-direction: column;
@@ -159,7 +148,7 @@ body {
     outline: none;
     padding: 0 15px;
     transition: border-color .2s cubic-bezier(.645, .045, .355, 1);
-    width: 229px;
+    width: 163px;
 }
 
 .el-input:focus {
@@ -174,7 +163,7 @@ body {
 }
 
 .group {
-    width: auto;
+    width: 299px;
     color: #606266;
     height: 350px;
 }
@@ -435,6 +424,7 @@ input:focus {
     margin-bottom: 16px;
     display: flex;
     align-items: center;
+    width: 230px;
 }
 
 .select-color-box {
@@ -751,7 +741,7 @@ button:hover {
     position: relative;
     display: flex;
     flex: 1;
-    width: 100%;
+    width: 79%;
 }
 
 textarea {
@@ -766,12 +756,6 @@ textarea {
     border: 1px solid #dcdfe6;
     color: #606266;
     transition: border-color .2s cubic-bezier(.645, .045, .355, 1);
-}
-
-.textarea-box {
-    position: relative;
-    width: 107%;
-
 }
 
 textarea:hover {
